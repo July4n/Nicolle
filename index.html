@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolle</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-family: Arial, sans-serif; /* Cambia la fuente a Arial */
+        }
+        .nicol-section {
+            background-image: url('Nn/fondo-mobile.png');
+            background-size: cover;
+            background-position: center;
+            padding: 20px 0;
+            color: white;
+        }
+        .name-box {
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado con logo -->
+    <header style="padding: 5px 0; background-color: transparent;">
+        <img src="Nn/logo.png" alt="LOGOs" style="width: 120px; height: 120px; border: 5px solid black; border-radius: 50%;">
+    </header>
+    
+    <!-- Línea negra después del logo -->
+    <hr style="border: 2px solid black; width: 100%; margin: 0;">
+    
+    <!-- Sección "nicol" con imagen y descripción -->
+    <section class="nicol-section">
+        <h2 style="margin: 0;">nicol</h2>
+        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+            <div>
+                <img src="Nn/yo.png" alt="Yo" style="width: 150px; height: auto; border: 2px solid white;">
+            </div>
+            <div class="name-box">
+                <h1><strong>Nicolle Suárez</strong></h1>
+                <span><strong>@Alexa_Rdz</strong></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Línea negra que separa la información del footer -->
+    <hr style="border: 2px solid black; width: 100%; margin: 0;">
+    
+    <!-- Sección de información -->
+    <section style="background-color: white; color: black; padding: 10px; margin: 0;">
+        <p><strong>Soy Nicolle Suárez, una estilista apasionada por el mundo de la belleza y el cuidado personal. Mi objetivo es ayudar a cada persona a resaltar su estilo y personalidad a través de cortes de cabello modernos, técnicas avanzadas de coloración y peinados para ocasiones especiales.</strong></p>
+        <p><strong>Mis habilidades incluyen cortes y estilización, técnicas avanzadas de coloración como balayage y ombré, peinados personalizados para eventos especiales, y asesoría de imagen para encontrar el estilo ideal. Mi prioridad es que cada cliente disfrute de una experiencia cómoda y salga seguro y feliz con su nueva imagen.
+
+</strong></p>
+    </section>
+
+    <!-- Cuadro negro de redes sociales al final de la página -->
+    <footer style="background-color: black; color: white; text-align: center; padding: 20px 0; width: 100%;">
+        <h2><strong>Mis redes sociales</strong></h2>
+        <div style="display: flex; justify-content: center; gap: 15px;">
+            <a href="https://www.instagram.com/alexandra_rdz0818?igsh=ZXkwNzNwMTJwNWEz&_r=1" target="_blank">
+                <img src="redes/ig.png" alt="ig" style="width: 80px; height: 80px; border-radius: 50%;">
+
+            </a>
+        </div>
+        <p style="margin-top: 20px;"><strong>Visitas: <span id="visitCounter">0</span></strong></p>
+    </footer>
+
+    <script>
+        // Contador de visitas en almacenamiento local
+        let visitCount = localStorage.getItem('visitCount') ? parseInt(localStorage.getItem('visitCount')) : 0;
+        visitCount++;
+        localStorage.setItem('visitCount', visitCount);
+        document.getElementById('visitCounter').innerText = visitCount;
+    </script>
+</body>
+</html>
